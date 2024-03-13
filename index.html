@@ -275,7 +275,7 @@
       <div class="content has-text-justified">
         <br>
       <p>
-        In our study, the trust game serves as a mechanism to validate the presence of trust behavior in Large Language Model (LLM) agents. By examining the amounts sent and the Belief-Desire-Intention (BDI) outputs across various LLMs within the context of the trust game, we aim to ascertain the existence of trust behavior in LLM agents.
+        In our study, the trust game serves as a framework to validate the presence of trust behavior in Large Language Model (LLM) agents. By examining the amounts sent and the Belief-Desire-Intention (BDI) interpretation for different LLMs within the context of the trust game, we aim to ascertain the existence of trust behavior in LLM agents.
 
       </p>
       </div>
@@ -289,8 +289,11 @@
       </div>
       <br>
       <p>
-        <p>To evaluate the capacity of LLMs to comprehend basic experimental settings regarding money limits, we used the Valid Response Rate (VRR) as a metric. This metric measures the percentage of responses where the amount sent does not exceed the initial money limit of $10. Our findings reveal that most LLMs, with the notable exception of Llama-7b, demonstrate a high VRR. This indicates a comprehensive understanding among most LLMs of the limits within the Trust Game framework.</p>
-        <p>Furthermore, the analysis of the amount sent by different LLMs acting as trustor agents showed all amounts to be positive, showcasing a level of trust. Additionally, the consistency observed between the reasoning process and the final decisions in Trust Games underscores the rationality of LLM agents to a certain extent.</p>
+        <p>To evaluate the capacity of LLMs to comprehend basic experimental settings regarding money limits, we proposed a new metric, Valid Response Rate (VRR). This metric measures the percentage of responses where the amount sent does not exceed the initial money limit of $10. Our findings reveal that most LLMs, with the exception of Llama-7b, demonstrate a high VRR. This indicates a complete understanding among most LLMs of the limits within the Trust Game framework.</p>
+        <p>Furthermore, the amounts sent by different LLMs acting as trustor agents are mostly positive, showcasing a level of trust. Additionally, we explored utilizing BDI to model the reasoning process of LLM agents. Since
+          we can interpret the decisions from the reasoning process,
+          we have evidence to show that LLM agents do not send a
+          random amount of money and have some degree of rationality in the decision making process.</p>
         <p>Given these observations, we highlight our first core finding: </p>
         <style>
           .grey-box {
@@ -318,9 +321,9 @@
       <br>
       <div class="carousel-container" id="carousel1">
         <div class="carousel-inner">
-          <div class="carousel-item active">
+          <div class="carousel-item">
             <img src="static/images/dic trust plot1_1.png" alt="Image 1">
-            <div class="caption">The Comparison of Average Amount Sent  for LLM Agents and Humans in Trust Game and Dictator Game</div>
+            <div class="caption"><p><strong>The Comparison of Average Amount Sent  for LLM Agents and Humans in Trust Game and Dictator Game</strong></p></div>
           </div>
           <div class="carousel-item">
             <img src="static/images/Risky Dictator Game and Trust Game_1.png" alt="Image 2">
@@ -399,7 +402,7 @@
       </div>
       <div class="carousel-container" id="carousel2">
         <div class="carousel-inner">
-          <div class="carousel-item active">
+          <div class="carousel-item">
             <img src="static/images/BDI dialog (1)-1.png" alt="Image 1">
             <div class="caption">The GPT-4's BDI in Dictator Game and Trust Game.</div>
           </div>
