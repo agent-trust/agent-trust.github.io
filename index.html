@@ -1,38 +1,78 @@
 
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
   <meta charset="utf-8">
-  <!-- <meta name="description" content="LLMs Meet Misinformation"> -->
+  <meta name="description" content="Research on whether LLM agents can simulate human trust behavior. Published at NeurIPS 2024. GPT-4 agents show high behavioral alignment with humans in Trust Games.">
   <meta name="keywords" content="LLM, Large Language Model, LLM Agent, Human Trust Behavior">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Can Large Language Model Agents Simulate Human Trust Behavior?</title>
 
-<!-- Begin Jekyll SEO tag v2.8.0 -->
-<!-- <meta name="generator" content="Jekyll v3.9.3" /> -->
 <meta property="og:title" content="Can Large Language Model Agents Simulate Human Trust Behavior?" />
+<meta property="og:description" content="Research on whether LLM agents can simulate human trust behavior. Published at NeurIPS 2024. GPT-4 agents show high behavioral alignment with humans in Trust Games." />
 <meta property="og:locale" content="en_US" />
-<link rel="canonical" href="https://agent-trust.github.io/" />
-<meta property="og:url" content="https://agent-trust.github.io/" />
-<meta property="og:site_name" content="Can Large Language Model Agents Simulate Human Trust Behavior?" />
-<meta property="og:type" content="website" />
-<meta property="og:image" content="https://agent-trust.github.io/static/images/agent-trust-logo-tertiary.png" />
-<meta name="twitter:card" content="summary" />
+<link rel="canonical" href="https://agent-trust.camel-ai.org/" />
+<meta property="og:url" content="https://agent-trust.camel-ai.org/" />
+<meta property="og:site_name" content="Agent Trust" />
+<meta property="og:type" content="article" />
+<meta property="og:image" content="https://agent-trust.camel-ai.org/static/images/agent-trust-logo-tertiary.png" />
+<meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title" content="Can Large Language Model Agents Simulate Human Trust Behavior?" />
-<meta name="twitter:description" content="Can Large Language Model Agents Simulate Human Trust Behavior?" />
+<meta name="twitter:description" content="Research on whether LLM agents can simulate human trust behavior. Published at NeurIPS 2024. GPT-4 agents show high behavioral alignment with humans in Trust Games." />
 <meta name="twitter:site" content="@CanyuChen3" />
-<meta name="twitter:image" content="https://agent-trust.github.io/static/images/agent-trust-logo-tertiary.png" />
+<meta name="twitter:image" content="https://agent-trust.camel-ai.org/static/images/agent-trust-logo-tertiary.png" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebSite","headline":"Can Large Language Model Agents Simulate Human Trust Behavior?","name":"Can Large Language Model Agents Simulate Human Trust Behavior?","url":"https://agent-trust.github.io/"}</script>
-<!-- End Jekyll SEO tag -->
+{
+  "@context": "https://schema.org",
+  "@type": "ScholarlyArticle",
+  "headline": "Can Large Language Model Agents Simulate Human Trust Behavior?",
+  "name": "Can Large Language Model Agents Simulate Human Trust Behavior?",
+  "url": "https://agent-trust.camel-ai.org/",
+  "image": "https://agent-trust.camel-ai.org/static/images/agent-trust-logo-tertiary.png",
+  "datePublished": "2024-02-06",
+  "dateModified": "2024-11-24",
+  "publisher": {
+    "@type": "Organization",
+    "name": "NeurIPS 2024"
+  },
+  "author": [
+    {"@type": "Person", "name": "Chengxing Xie", "affiliation": "KAUST"},
+    {"@type": "Person", "name": "Canyu Chen", "affiliation": "Illinois Institute of Technology"},
+    {"@type": "Person", "name": "Feiran Jia", "affiliation": "Pennsylvania State University"},
+    {"@type": "Person", "name": "Ziyu Ye", "affiliation": "University of Chicago"},
+    {"@type": "Person", "name": "Shiyang Lai", "affiliation": "University of Chicago"},
+    {"@type": "Person", "name": "Kai Shu", "affiliation": "Emory"},
+    {"@type": "Person", "name": "Jindong Gu", "affiliation": "University of Oxford"},
+    {"@type": "Person", "name": "Adel Bibi", "affiliation": "University of Oxford"},
+    {"@type": "Person", "name": "Ziniu Hu", "affiliation": "California Institute of Technology"},
+    {"@type": "Person", "name": "David Jurgens", "affiliation": "University of Michigan"},
+    {"@type": "Person", "name": "James Evans", "affiliation": "University of Chicago"},
+    {"@type": "Person", "name": "Philip H.S. Torr", "affiliation": "University of Oxford"},
+    {"@type": "Person", "name": "Bernard Ghanem", "affiliation": "KAUST"},
+    {"@type": "Person", "name": "Guohao Li", "affiliation": "University of Oxford"}
+  ],
+  "description": "We investigate whether LLM agents can simulate human trust behavior using Trust Games. GPT-4 agents manifest high behavioral alignment with humans, indicating the feasibility of simulating human trust behavior with LLM agents.",
+  "keywords": ["LLM", "Large Language Model", "LLM Agent", "Trust", "Behavioral Alignment", "Trust Game", "NeurIPS 2024"],
+  "isPartOf": {
+    "@type": "Event",
+    "name": "The Thirty-eighth Annual Conference on Neural Information Processing Systems (NeurIPS 2024)"
+  }
+}
+</script>
+
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://ajax.googleapis.com" crossorigin>
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
 
   <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/styles/default.min.css">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/highlight.min.js"></script>
-  <script>hljs.initHighlightingOnLoad();</script>
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/highlight.min.js"></script>
+  <script>document.addEventListener('DOMContentLoaded', function() { hljs.highlightAll(); });</script>
 
-  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Google+Sans&family=Noto+Sans&family=Castoro&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="./static/css/bulma.min.css">
   <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
@@ -42,14 +82,11 @@
   <link rel="stylesheet" href="./static/css/index.css">
   <link rel="icon" href="./static/images/icon.svg">
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script defer src="./static/js/fontawesome.all.min.js"></script>
-  <script src="./static/js/bulma-carousel.min.js"></script>
-  <script src="./static/js/bulma-slider.min.js"></script>
-  <script src="./static/js/index.js"></script>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Image Carousel</title>
+  <script defer src="./static/js/bulma-carousel.min.js"></script>
+  <script defer src="./static/js/bulma-slider.min.js"></script>
+  <script defer src="./static/js/index.js"></script>
 <style>
   .carousel-container {
     position: relative;
@@ -132,7 +169,7 @@
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
-            <img src="./static/images/agent-trust-logo-tertiary.png" class="header-image" style="max-width:4cm; height: auto; vertical-align: middle; margin-right: 10px;">
+            <img src="./static/images/agent-trust-logo-tertiary.png" alt="Agent Trust - Can LLM Agents Simulate Human Trust Behavior?" class="header-image" style="max-width:4cm; height: auto; vertical-align: middle; margin-right: 10px;">
             <h1 id="Can-Large-Language-Model-Agents-Simulate-Human-Trust-Behaviors" class="title is-1 publication-title">Can Large Language Model Agents Simulate Human Trust Behavior?</h1>
             <h1 id="Can-Large-Language-Model-Agents-Simulate-Human-Trust-Behaviors" class="is-size-5 publication-title">TLDR: We discover that LLM agents generally exhibit trust behavior in Trust Games and GPT-4 agents manifest high <strong><em>behavioral alignment</em></strong> with humans in terms of trust behavior, indicating the potential to simulate human trust behavior with LLM agents.</h1>
               <br>
@@ -284,7 +321,7 @@
 
     <div class="container is-max-desktop" style="text-align: center;">
       <figure style="display: inline-block;">
-        <img src="static/images/framework.png" alt="framework" style="max-width: 100%; height: auto;">
+        <img loading="lazy" src="static/images/framework.png" alt="framework" style="max-width: 100%; height: auto;">
         <figcaption><i><strong>Our Framework for Investigating Agent Trust as well as its Behavioral Alignment with Human Trust.</strong> First, this figure shows the major components for studying the trust behavior of LLM agents with Trust Games and Belief-Desire-Intention (BDI) modeling. Then, our study centers on examining the behavioral alignment between LLM agents and humans regarding trust behavior.</i></figcaption>
       </figure>
     </div>
@@ -307,7 +344,7 @@
     <br>
     <div class="container is-max-desktop">
       <figure>
-        <img src="static/images/framework.png" alt="survey">
+        <img loading="lazy" src="static/images/framework.png" alt="survey">
       </figure>
     </div> -->
   <!-- </section> -->
@@ -346,7 +383,7 @@
         <!-- <img style='height: auto; width: 90%; object-fit: contain' src="static/images/trust game plot.png"
           alt="overview_image"> -->
         <figure id="fig-trust">
-          <img src="static/images/trust game plot.png" alt="Figure 2">
+          <img loading="lazy" src="static/images/trust game plot.png" alt="Figure 2">
           <figcaption><strong>Fig 2: Amount Sent Distribution of LLM Agents and Humans as the Trustor in the Trust Game.</strong> The size of circles represents the number of personas for each amount sent. The bold lines show the medians. The <strong>crosses</strong> indicate the <strong>VRR</strong> (%) for different LLMs.</figcaption>
         </figure>
       </div>
@@ -385,21 +422,21 @@
       <div class="carousel-container" id="carousel1">
         <div class="carousel-inner">
           <div class="carousel-item">
-            <img src="static/images/dic trust plot1_1.png" alt="Image 1">
+            <img loading="lazy" src="static/images/dic trust plot1_1.png" alt="Image 1">
             <div class="caption"><p><strong>The Comparison of Average Amount Sent for LLM Agents and Humans in Trust Game and Dictator Game</strong></p></div>
           </div>
           <div class="carousel-item">
-            <img src="static/images/Risky Dictator Game and Trust Game_1.png" alt="Image 2">
+            <img loading="lazy" src="static/images/Risky Dictator Game and Trust Game_1.png" alt="Image 2">
             <div class="caption"><p><strong>Trust Rate (%) Curves for LLM Agents and Humans in the MAP Trust Game and the Risky Dictator Game.</strong> The metric Trust Rate indicates the portion of trustors opting for trust given \(p\).</p>
             </div>
           </div>
           <div class="carousel-item">
-            <img src="static/images/lottery curve_1.png" alt="Image 3">
+            <img loading="lazy" src="static/images/lottery curve_1.png" alt="Image 3">
             <div class="caption"><p><strong>Lottery Rates (%) for LLM Agents and Humans in the Lottery Gamble Game and the Lottery People Game.</strong> Lottery Rate indicates the portion of choosing to gamble or trust the other player.</p>
             </div>
           </div>
           <div class="carousel-item">
-            <img src="static/images/multi_round.png" alt="Image 4">
+            <img loading="lazy" src="static/images/multi_round.png" alt="Image 4">
             <div class="caption"><p><strong>Results of GPT-4, GPT-3.5 and Humans in the Repeated Trust Game.</strong> The blue lines indicate the amount sent or returned for each round. The red lines imply the ratio of the amount returned to three times of the amount sent for each round.</p>
             </div>
           </div>
@@ -428,7 +465,7 @@
         <h2 class="title is-3">Probing Intrinsic Properties of Agent Trust</h2>
       </div>
       <figure>
-        <img src="static/images/section_6_figure_9_no_race_model_relative_00.png" alt="Figure 2">
+        <img loading="lazy" src="static/images/section_6_figure_9_no_race_model_relative_00.png" alt="Figure 2">
         <figcaption><strong>The Change of Average Amount Sent for LLM Agents in Different Scenarios in the Trust Game, Reflecting the Intrinsic Properties of Agent Trust.</strong> The horizontal lines represent the original amount sent in the Trust Game. The green part embraces trustee scenarios including changing the demographics of the trustee, and setting humans and agents as the trustee. The purple part consists of trustor scenarios including adding manipulation instructions and changing the reasoning strategies.</figcaption>
       </figure>
       <div class="content has-text-justified">
@@ -466,71 +503,71 @@
       <div class="carousel-container" id="carousel2">
         <div class="carousel-inner">
           <div class="carousel-item">
-            <img src="static/images/BDI dialog (1)-1.png" alt="Image 1">
+            <img loading="lazy" src="static/images/BDI dialog (1)-1.png" alt="Image 1">
             <div class="caption">The GPT-4's BDI in Dictator Game and Trust Game.</div>
           </div>
           <div class="carousel-item">
-            <img src="static/images/BDI dialog (1)-3.png" alt="Image 2">
+            <img loading="lazy" src="static/images/BDI dialog (1)-3.png" alt="Image 2">
             <div class="caption"><p>The GPT-4's BDI in MAP Trust Game.</p>
             </div>
           </div>
           <div class="carousel-item">
-            <img src="static/images/BDI dialog (1)-4.png" alt="Image 3">
+            <img loading="lazy" src="static/images/BDI dialog (1)-4.png" alt="Image 3">
             <div class="caption"><p>LThe GPT-4's BDI in Lottery Game with p = 46%</p>
             </div>
           </div>
           <div class="carousel-item">
-            <img src="static/images/section5 BDI-1.png" alt="Image 4">
+            <img loading="lazy" src="static/images/section5 BDI-1.png" alt="Image 4">
             <div class="caption"><p>Trustee's Gender influence on agent trust.</p>
             </div>
           </div>
           <div class="carousel-item">
-            <img src="static/images/section5 BDI-2.png" alt="Image 5">
+            <img loading="lazy" src="static/images/section5 BDI-2.png" alt="Image 5">
             <div class="caption"><p>Agent trust towards agents and humans.</p>
             </div>
           </div>
           <div class="carousel-item">
-            <img src="static/images/section5 BDI-3.png" alt="Image 6">
+            <img loading="lazy" src="static/images/section5 BDI-3.png" alt="Image 6">
             <div class="caption"><p>Trust manipulation on agent trust.</p>
             </div>
           </div>
           <div class="carousel-item">
-            <img src="static/images/section5 BDI-4.png" alt="Image 7">
+            <img loading="lazy" src="static/images/section5 BDI-4.png" alt="Image 7">
             <div class="caption"><p>With CoT and without CoT's GPT-4's BDI.</p>
             </div>
           </div>
           <div class="carousel-item">
-            <img src="static/images/multi_round_BDI_7_7round_00.png" alt="Image 8">
+            <img loading="lazy" src="static/images/multi_round_BDI_7_7round_00.png" alt="Image 8">
             <div class="caption"><p>The first round BDI in Group 10, GPT-4.</p>
             </div>
           </div>
           <div class="carousel-item">
-            <img src="static/images/multi_round_BDI_7_7round_01.png" alt="Image 9">
+            <img loading="lazy" src="static/images/multi_round_BDI_7_7round_01.png" alt="Image 9">
             <div class="caption"><p>The second round BDI in Group 10, GPT-4.</p>
             </div>
           </div>
           <div class="carousel-item">
-            <img src="static/images/multi_round_BDI_7_7round_02.png" alt="Image 9">
+            <img loading="lazy" src="static/images/multi_round_BDI_7_7round_02.png" alt="Image 9">
             <div class="caption"><p>The third round BDI in Group 10, GPT-4.</p>
             </div>
           </div>
           <div class="carousel-item">
-            <img src="static/images/multi_round_BDI_7_7round_03.png" alt="Image 9">
+            <img loading="lazy" src="static/images/multi_round_BDI_7_7round_03.png" alt="Image 9">
             <div class="caption"><p>The forth round BDI in Group 10, GPT-4.</p>
             </div>
           </div>
           <div class="carousel-item">
-            <img src="static/images/multi_round_BDI_7_7round_04.png" alt="Image 10">
+            <img loading="lazy" src="static/images/multi_round_BDI_7_7round_04.png" alt="Image 10">
             <div class="caption"><p>The fifth round BDI in Group 10, GPT-4.</p>
             </div>
           </div>
           <div class="carousel-item">
-            <img src="static/images/multi_round_BDI_7_7round_05.png" alt="Image 11">
+            <img loading="lazy" src="static/images/multi_round_BDI_7_7round_05.png" alt="Image 11">
             <div class="caption"><p>The sixth round BDI in Group 10, GPT-4.</p>
             </div>
           </div>
           <div class="carousel-item">
-            <img src="static/images/multi_round_BDI_7_7round_06.png" alt="Image 12">
+            <img loading="lazy" src="static/images/multi_round_BDI_7_7round_06.png" alt="Image 12">
             <div class="caption"><p>The seventh round BDI in Group 10, GPT-4.</p>
             </div>
           </div>
